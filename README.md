@@ -1,23 +1,29 @@
 # Project 3 Generative Audio
 
-Your Name, yourcontact@ucsd.edu
-
-(Your teammate's contact info, if appropriate)
+Changhao Shi, cshi@ucsd.edu
 
 ## Abstract
 
-Include your abstract here. This should be one paragraph clearly describing your concept, method, and results. This should tell us what architecture/approach you used. Also describe your creative goals, and whether you were successful in achieving them. Also could describe future directions.
+In this project I produce sounds from real neural signal recording of the brain. 
+The basic idea is to compose a seed for midi generation with these neural signal, and use a pretrained deep network to carry on.
+I extract the spike counts for each neuron, then convert these spike counts into pitches: the larger the spike count is the higher the pitch is.
+Using this seed, PerformanceRNN can help me generate longer piece of midi music. 
 
 ## Model/Data
 
 Briefly describe the files that are included with your repository:
-- trained models
-- training data (or link to training data)
+- trained models: PerformanceRNN
+    In this project, I use a pretrained PerformanceRNN model downloaded from the Magenta website.
+    The version I use is the 'performance with dynamics'
+    The model will be downloaded when running the python notebook file.
+- training data: real ECoG signals
+    The source data I use is some ECoG signal recorded from a monkey, provided by Professor Vikash Gilja in ECE209 (Statistical learning for biosignal processing). 
+    The 97-channel ECoG signals are recorded for 700 ms, during which period the monkey is asked to reach for a target after seeing a cue.
+    The data is stored in a 97*700 matrix, where each entry is 1 or 0 depending on the appearance of a neural spike in that milisecond.
 
 ## Code
 
 Your code for generating your project:
-- Python: generative_code.py
 - Jupyter notebooks: generative_code.ipynb
 
 ## Results
@@ -32,7 +38,6 @@ Documentation of your results in an appropriate format, both links to files and 
 
 Any implementation details or notes we need to repeat your work. 
 - Does this code require other pip packages, software, etc?
-- Does it run on some other (non-datahub) platform? (CoLab, etc.)
 
 ## Reference
 
