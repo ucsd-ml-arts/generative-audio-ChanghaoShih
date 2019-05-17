@@ -8,7 +8,7 @@ In this project I produce sounds from real neural signal recording of the brain.
 The basic idea is to compose a seed for midi generation with these neural signal, and use a pretrained deep network to carry on.
 First, I count the spike for each neuron with a 10 ms time bin.
 Then, I sum this multi-channel spike counts into 1-dimensional to get the spike counts of this neural population.
-These spike counts are converted into pitches by adding a constant bias 60.
+These spike counts are converted into pitches by adding a constant bias 60 to map them into reasonable range.
 As the relative value of the counts remain the same, the larger the spike count is the higher the pitch is.
 Using this seed, PerformanceRNN can help me generate longer piece of midi music. 
 These procedures are performed on the baseline (inactive) stage and the planning (active) stage of the neural signals respectively.
@@ -38,8 +38,8 @@ Even further, we can record the neural signal of one listening or thinking about
 
 ## Results
 
-- `baseline.midi`: midi generation of baseline stage neural recording
-- `planning.midi`: midi generation of planning stage neural recording
+- `baseline.mid`: midi generation of baseline stage neural recording
+- `planning.mid`: midi generation of planning stage neural recording
     Listenning to the music, we can find that the midi generation from the planning stage is somehow indeed more 'active' than baseline stage.
     PerformanceRNN composes more variation on the strength of the hits in planning generation while it composes almost light hits in baseline generation.
     Midi generation from baseline stage is more flat while the generation from planning stage is more emotional.
