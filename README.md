@@ -12,7 +12,7 @@ These spike counts are converted into pitches by adding a constant bias 60 to ma
 As the relative value of the counts remain the same, the larger the spike count is the higher the pitch is.
 Using this seed, PerformanceRNN can help me generate longer piece of midi music. 
 These procedures are performed on the baseline (inactive) stage and the planning (active) stage of the neural signals respectively.
-I expect to get some difference in terms of the 'active level' corresponding to the real 'active level'
+I expect to get some difference in terms of the 'active level' corresponding to the real 'active level'.
 Instead of using default value of 1, the temperature is set to 0.7 so that we can have a clearer impression of the influences of the seed by reducing the randomness of sampling.
 
 In the future, we can use some specific neural signals with oscillation to generate music, which is more rhythmic than this one.
