@@ -40,6 +40,7 @@ Even further, we can record the neural signal of one listening or thinking about
 
 - `baseline.mid`: midi generation of baseline stage neural recording
 - `planning.mid`: midi generation of planning stage neural recording
+
     Listenning to the music, we can find that the midi generation from the planning stage is somehow indeed more 'active' than baseline stage.
     PerformanceRNN composes more variation on the strength of the hits in planning generation while it composes almost light hits in baseline generation.
     Midi generation from baseline stage is more flat while the generation from planning stage is more emotional.
